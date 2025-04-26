@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>숨겨진 명소 - Expats in Hanguk</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .page-header {
+            background-color: #198754;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1480796927426-f609979314bd?w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 60px 0;
+            margin-bottom: 40px;
+        }
+        .spot-card {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        .spot-img {
+            height: 250px;
+            overflow: hidden;
+        }
+        .spot-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        .spot-img img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <div class="container">
+            <a class="navbar-brand" href="#">Expats in Hanguk </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">홈</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="food.html">맛집</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="spots.html">명소</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tips.html">팁</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">연락처</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header text-center">
+        <div class="container">
+            <h1 class="display-4">관광객이 모르는 숨겨진 명소</h1>
+            <p class="lead">현지인들이 즐겨 찾는 특별한 장소들</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-lg-4">
+                <div class="spot-card">
+                    <div class="spot-img">
+                        <img src="https://images.unsplash.com/photo-1528164344705-47542687000d?w=600&h=400&q=80" alt="숨겨진 공원">
+                    </div>
+                    <div class="p-4">
+                        <h3>도심 속 숨겨진 정원</h3>
+                        <p class="text-muted">종로구</p>
+                        <p>바쁜 도심 한복판에 있지만 관광객들에게 거의 알려지지 않은 이 작은 정원은 현지인들이 휴식을 취하는 비밀 장소입니다. 오래된 한옥과 현대적 조경이 조화를 이루는 이곳에서 도시의 소음을 잊어보세요.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4">
+                <div class="spot-card">
+                    <div class="spot-img">
+                        <img src="https://images.unsplash.com/photo-1517309230475-6736d926b979?w=600&h=400&q=80" alt="야경 스팟">
+                    </div>
+                    <div class="p-4">
+                        <h3 id="night-view">숨겨진 야경 명소</h3>
+                        <p class="text-muted">마포구</p>
+                        <p>인스타그램에서 유명한 야경 스팟보다 더 아름답지만 관광객들은 거의 모르는 이곳은 현지인들의 데이트 장소로 유명합니다. 주변에 현지 분위기의 작은 카페들이 있어 완벽한 저녁을 보낼 수 있습니다.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4">
+                <div class="spot-card">
+                    <div class="spot-img">
+                        <img src="https://images.unsplash.com/photo-1584483766114-2cea6facdf57?w=600&h=400&q=80" alt="예술 거리">
+                    </div>
+                    <div class="p-4">
+                        <h3>아티스트들의 비밀 골목</h3>
+                        <p class="text-muted">성수동</p>
+                        <p>힙스터들이 많은 성수동의 유명 거리에서 조금만 벗어나면 현지 예술가들이 작업실과 작은 갤러리를 운영하는 숨겨진 골목이 있습니다. 주말에는 작은 마켓이 열려 독특한 수공예품을 구경할 수 있습니다.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4">
+                <div class="spot-card">
+                    <div class="spot-img">
+                        <img src="https://images.unsplash.com/photo-1566438480900-0609be27a4be?w=600&h=400&q=80" alt="숨겨진 해변">
+                    </div>
+                    <div class="p-4">
+                        <h3>도시 근교의 한적한 해변</h3>
+                        <p class="text-muted">서해안</p>
+                        <p>유명 해수욕장에서 불과 3km 떨어진 곳에 위치한 이 작은 해변은 현지인들만 아는 보물 같은 장소입니다. 대중교통으로 접근하기 어렵지만, 그만큼 한적하고 아름다운 일몰을 즐길 수 있습니다.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4">
+                <div class="spot-card">
+                    <div class="spot-img">
+                        <img src="https://images.unsplash.com/photo-1540979388789-6cee28a1cdc9?w=600&h=400&q=80" alt="벽화 마을">
+                    </div>
+                    <div class="p-4">
+                        <h3>숨겨진 벽화 마을</h3>
+                        <p class="text-muted">북한산 근처</p>
+                        <p>유명한 벽화마을보다 훨씬 아름답고 한적한 이 마을은 지역 예술가들이 10년 이상 조용히 가꿔온 곳입니다. 북한산을 배경으로 한 다채로운 벽화와 함께 마을 곳곳에 있는 작은 카페들도 놓치지 마세요.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4">
+                <div class="spot-card">
+                    <div class="spot-img">
+                        <img src="https://images.unsplash.com/photo-1481000713909-5e0a7bc2322c?w=600&h=400&q=80" alt="시장 뒷골목">
+                    </div>
+                    <div class="p-4">
+                        <h3>시장 뒷골목의 보물창고</h3>
+                        <p class="text-muted">동대문 근처</p>
+                        <p>동대문 시장의 번잡함을 벗어나 골목을 조금만 들어가면 현지 디자이너들이 자주 찾는 비밀 보물창고가 있습니다. 유명 시장보다 더 좋은 품질의 제품을 더 저렴하게 구할 수 있는 현지인들의 쇼핑 명소입니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p>© 2025 Expats in Hanguk. 모든 권리 보유.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+```
