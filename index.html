@@ -1,24 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expats in Hanguk</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        .hero-section {
-            background-color: #198754;
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1517154421773-0529f29ea451?q=80&w=1200');
+        .hero-bg {
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1517154421773-0529f29ea451?q=80&w=1200');
             background-size: cover;
             background-position: center;
-            color: white;
-            padding: 100px 0;
-            margin-bottom: 40px;
         }
         .card {
             transition: transform 0.3s;
-            margin-bottom: 20px;
-            border: none;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
         .card:hover {
@@ -35,87 +29,127 @@
         }
     </style>
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
-        <div class="container">
-            <a class="navbar-brand" href="#">Expats in Hanguk</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">홈</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="food.html">맛집</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="spots.html">명소</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="tips.html">팁</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">연락처</a>
-                    </li>
-                </ul>
+<body class="bg-[#f3e8ff] font-sans"> <!-- Pastel lavender background -->
+    <!-- Navbar -->
+    <nav class="bg-[#ffb3cc] sticky top-0 z-10"> <!-- Pastel pink -->
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a class="text-2xl font-bold text-[#6b4fb3]" href="#">Expats in Hanguk</a>
+            <div class="hidden md:flex space-x-6">
+                <a class="text-[#6b4fb3] hover:text-white" href="#">홈</a>
+                <a class="text-[#6b4fb3] hover:text-white" href="food.html">맛집</a>
+                <a class="text-[#6b4fb3] hover:text-white" href="spots.html">명소</a>
+                <a class="text-[#6b4fb3] hover:text-white" href="tips.html">팁</a>
+                <a class="text-[#6b4fb3] hover:text-white" href="contact.html">연락처</a>
             </div>
+            <button class="md:hidden text-[#6b4fb3]" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-[#ffb3cc] px-4 py-2">
+            <a class="block text-[#6b4fb3] hover:text-white py-2" href="#">Home</a>
+            <a class="block text-[#6b4fb3] hover:text-white py-2" href="food.html">Restaurants</a>
+            <a class="block text-[#6b4fb3] hover:text-white py-2" href="spots.html">Attractions</a>
+            <a class="block text-[#6b4fb3] hover:text-white py-2" href="tips.html">Tips</a>
+            <a class="block text-[#6b4fb3] hover:text-white py-2" href="contact.html">Contact</a>
         </div>
     </nav>
 
-    <section class="hero-section text-center">
-        <div class="container">
-            <h1 class="display-4">현지인만 아는 진짜 정보</h1>
-            <p class="lead">관광 가이드북에는 없는 숨겨진 장소와 경험을 발견하세요</p>
-            <a href="#categories" class="btn btn-light btn-lg mt-3">둘러보기</a>
+    <!-- Hero Section -->
+    <header class="hero-bg h-screen flex items-center justify-center text-white">
+        <div class="text-center px-4">
+            <h1 class="text-5xl md:text-6xl font-bold mb-4 text-[#fff3cd]">Insider Knowledge Only Locals Know</h1> <!-- Pastel yellow -->
+            <p class="text-xl md:text-2xl mb-6 text-[#c1f0e1]">Discover hidden places and experiences not found in tourist guidebooks</p> <!-- Pastel mint -->
+            <a href="#categories" class="bg-[#ffb3cc] hover:bg-[#ff99b8] text-[#6b4fb3] font-semibold py-3 px-6 rounded-lg transition duration-300">Explore</a>
         </div>
-    </section>
+    </header>
 
-    <section class="container" id="categories">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-img-container">
-                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=500&h=300&q=80" class="card-img-top" alt="숨은 맛집">
-                    </div>
-                    <div class="card-body text-center">
-                        <h3 class="card-title">숨은 맛집</h3>
-                        <p class="card-text">현지인들만 아는 최고의 음식점들</p>
-                        <a href="food.html" class="btn btn-outline-success">자세히 보기</a>
-                    </div>
+    <!-- About Section -->
+    <section class="py-16 bg-[#c1f0e1]"> <!-- Pastel mint green -->
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-6 text-[#6b4fb3]">About Expats in Hanguk</h2>
+            <p class="text-lg text-gray-800 mb-8 max-w-2xl mx-auto">
+                Expats in Hanguk is your go-to resource for navigating life in South Korea. Discover insider tips, hidden gems, and practical advice from locals and fellow expats to make your experience unforgettable.
+            </p>
+            <img src="https://python01-creator.github.io/Expats-in-Hanguk/korean_flag.jpg" alt="Korean Flag" class="mx-auto mb-8 rounded-lg shadow-lg max-w-xs">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-2 text-[#6b4fb3]">Explore</h3>
+                    <p class="text-gray-800">Find hidden spots and local favorites.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-2 text-[#6b4fb3]">Connect</h3>
+                    <p class="text-gray-800">Join a community of expats and locals.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-2 text-[#6b4fb3]">Thrive</h3>
+                    <p class="text-gray-800">Get tips to live like a local in Hanguk.</p>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-img-container">
-                        <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=500&h=300&q=80" class="card-img-top" alt="현지인 명소">
-                    </div>
-                    <div class="card-body text-center">
-                        <h3 class="card-title">숨겨진 명소</h3>
-                        <p class="card-text">관광객들이 모르는 특별한 장소들</p>
-                        <a href="spots.html" class="btn btn-outline-success">자세히 보기</a>
-                    </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="container py-16" id="categories">
+        <h2 class="text-4xl font-bold text-center mb-12 text-[#6b4fb3]">Discover Local Secrets</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="card bg-white rounded-lg">
+                <div class="card-img-container">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=500&h=300&q=80" class="card-img-top" alt="숨은 맛집">
+                </div>
+                <div class="card-body text-center p-6">
+                    <h3 class="text-2xl font-semibold mb-2 text-[#6b4fb3]">숨은 맛집</h3>
+                    <p class="text-gray-600 mb-4">현지인들만 아는 최고의 음식점들</p>
+                    <a href="food.html" class="bg-[#fff3cd] hover:bg-[#ffeb99] text-[#6b4fb3] font-semibold py-2 px-4 rounded-lg transition duration-300">자세히 보기</a>
                 </div>
             </div>
-          
+            <div class="card bg-white rounded-lg">
+                <div class="card-img-container">
+                    <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=500&h=300&q=80" class="card-img-top" alt="현지인 명소">
+                </div>
+                <div class="card-body text-center p-6">
+                    <h3 class="text-2xl font-semibold mb-2 text-[#6b4fb3]">숨겨진 명소</h3>
+                    <p class="text-gray-600 mb-4">관광객들이 모르는 특별한 장소들</p>
+                    <a href="spots.html" class="bg-[#fff3cd] hover:bg-[#ffeb99] text-[#6b4fb3] font-semibold py-2 px-4 rounded-lg transition duration-300">자세히 보기</a>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section class="bg-light py-5 mt-5">
-        <div class="container text-center">
-            <h2>현지 경험을 발견하세요</h2>
-            <p class="lead">지금 가입하고 더 많은 현지인 정보를 받아보세요</p>
-            <button class="btn btn-success btn-lg mt-3">시작하기</button>
+    <!-- Call to Action Section -->
+    <section class="py-16 bg-[#ffb3cc] text-gray-800"> <!-- Pastel pink -->
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-6 text-[#6b4fb3]">현지 경험을 발견하세요</h2>
+            <p class="text-lg mb-8 max-w-xl mx-auto">지금 가입하고 더 많은 현지인 정보를 받아보세요</p>
+            <button onclick="alert('Sign-up coming soon!')" class="bg-[#c1f0e1] text-[#6b4fb3] font-semibold py-3 px-6 rounded-lg hover:bg-[#a8e6d2] transition duration-300">
+                시작하기
+            </button>
         </div>
     </section>
 
-    <footer class="bg-dark text-white py-4 mt-5">
-        <div class="container text-center">
-            <p>© 2025 Expats in Hanguk. 모든 권리 보유.</p>
+    <!-- Footer -->
+    <footer class="py-8 bg-[#6b4fb3] text-white"> <!-- Vivid pastel purple -->
+        <div class="container mx-auto px-4 text-center">
+            <p>© 2025 Expats in Hanguk. All copyright.</p>
+            <div class="mt-4">
+                <a href="#" class="text-gray-200 hover:text-white mx-2">About</a>
+                <a href="contact.html" class="text-gray-200 hover:text-white mx-2">Contact</a>
+                <a href="#" class="text-gray-200 hover:text-white mx-2">Privacy</a>
+            </div>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Smooth Scrolling JavaScript -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
