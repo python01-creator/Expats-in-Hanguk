@@ -1,92 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expats in Hanguk</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        .hero-bg {
-            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://source.unsplash.com/random/1600x900/?korea');
+        .hero-section {
+            background-color: #198754;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1517154421773-0529f29ea451?q=80&w=1200');
             background-size: cover;
             background-position: center;
+            color: white;
+            padding: 100px 0;
+            margin-bottom: 40px;
         }
-        body {
-            background-color: #f3e8ff; /* Pastel lavender background */
+        .card {
+            transition: transform 0.3s;
+            margin-bottom: 20px;
+            border: none;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .card-img-container {
+            height: 200px;
+            overflow: hidden;
+        }
+        .card-img-top {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     </style>
 </head>
-<body class="font-sans">
-    <!-- Hero Section -->
-    <header class="hero-bg h-screen flex items-center justify-center text-white">
-        <div class="text-center px-4">
-            <h1 class="text-5xl md:text-6xl font-bold mb-4 text-[#ffccde]">Expats in Hanguk</h1>
-            <h2 class="text-2xl md:text-3xl mb-6 text-[#c1f0e1]">Your Guide to Thriving in South Korea</h2>
-            <a href="#contribute" class="bg-[#ffb3cc] hover:bg-[#ff99b8] text-white font-semibold py-3 px-6 rounded-lg transition duration-300">Share Your Experience</a>
-        </div>
-    </header>
-
-    <!-- About Section -->
-    <section class="py-16 bg-[#c1f0e1]"> <!-- Pastel mint green -->
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-4xl font-bold mb-6 text-[#6b4fb3]">About Expats in Hanguk</h2>
-            <p class="text-lg text-gray-800 mb-8 max-w-2xl mx-auto">
-                Welcome to Expats in Hanguk, a comprehensive resource for expatriates living in or planning to move to South Korea. This site offers valuable information, tips, and insights to help you navigate life in Hanguk with ease.
-            </p>
-            <img src="https://python01-creator.github.io/Expats-in-Hanguk/korean_flag.jpg" alt="Korean Flag" class="mx-auto mb-8 rounded-lg shadow-lg max-w-xs">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div>
-                    <h3 class="text-xl font-semibold mb-2 text-[#6b4fb3]">Learn</h3>
-                    <p class="text-gray-800">Discover practical tips for living in South Korea.</p>
-                </div>
-                <div>
-                    <h3 class="text-xl font-semibold mb-2 text-[#6b4fb3]">Connect</h3>
-                    <p class="text-gray-800">Join a community of expats sharing their experiences.</p>
-                </div>
-                <div>
-                    <h3 class="text-xl font-semibold mb-2 text-[#6b4fb3]">Thrive</h3>
-                    <p class="text-gray-800">Find resources to make the most of your time in Hanguk.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Call to Action Section -->
-    <section id="contribute" class="py-16 bg-[#ffb3cc] text-gray-800"> <!-- Pastel pink -->
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-4xl font-bold mb-6 text-[#6b4fb3]">Share Your Expat Story</h2>
-            <p class="text-lg mb-8 max-w-xl mx-auto">
-                Have tips, experiences, or advice for living in South Korea? Contribute to our community and help other expats thrive in Hanguk!
-            </p>
-            <button onclick="alert('Contributions coming soon!')" class="bg-[#c1f0e1] text-[#6b4fb3] font-semibold py-3 px-6 rounded-lg hover:bg-[#a8e6d2] transition duration-300">
-                Submit Your Tips
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <div class="container">
+            <a class="navbar-brand" href="#">Expats in Hanguk</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
             </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">홈</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="food.html">맛집</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="spots.html">명소</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tips.html">팁</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">연락처</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4">현지인만 아는 진짜 정보</h1>
+            <p class="lead">관광 가이드북에는 없는 숨겨진 장소와 경험을 발견하세요</p>
+            <a href="#categories" class="btn btn-light btn-lg mt-3">둘러보기</a>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="py-8 bg-[#6b4fb3] text-white"> <!-- Vivid pastel purple -->
-        <div class="container mx-auto px-4 text-center">
-            <p>&copy; 2025 Expats in Hanguk. All rights reserved.</p>
-            <div class="mt-4">
-                <a href="#" class="text-gray-200 hover:text-white mx-2">About</a>
-                <a href="#" class="text-gray-200 hover:text-white mx-2">Contact</a>
-                <a href="#" class="text-gray-200 hover:text-white mx-2">Privacy</a>
+    <section class="container" id="categories">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-img-container">
+                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=500&h=300&q=80" class="card-img-top" alt="숨은 맛집">
+                    </div>
+                    <div class="card-body text-center">
+                        <h3 class="card-title">숨은 맛집</h3>
+                        <p class="card-text">현지인들만 아는 최고의 음식점들</p>
+                        <a href="food.html" class="btn btn-outline-success">자세히 보기</a>
+                    </div>
+                </div>
             </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-img-container">
+                        <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=500&h=300&q=80" class="card-img-top" alt="현지인 명소">
+                    </div>
+                    <div class="card-body text-center">
+                        <h3 class="card-title">숨겨진 명소</h3>
+                        <p class="card-text">관광객들이 모르는 특별한 장소들</p>
+                        <a href="spots.html" class="btn btn-outline-success">자세히 보기</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-img-container">
+                        <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=500&h=300&q=80" class="card-img-top" alt="로컬 팁">
+                    </div>
+                    <div class="card-body text-center">
+                        <h3 class="card-title">현지인 팁</h3>
+                        <p class="card-text">현지에서 더 편하게 지내는 실용적인 조언</p>
+                        <a href="tips.html" class="btn btn-outline-success">자세히 보기</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-light py-5 mt-5">
+        <div class="container text-center">
+            <h2>현지 경험을 발견하세요</h2>
+            <p class="lead">지금 가입하고 더 많은 현지인 정보를 받아보세요</p>
+            <button class="btn btn-success btn-lg mt-3">시작하기</button>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p>© 2025 Expats in Hanguk. 모든 권리 보유.</p>
         </div>
     </footer>
 
-    <!-- Smooth Scrolling JavaScript -->
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-```
